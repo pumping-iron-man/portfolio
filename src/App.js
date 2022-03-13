@@ -2,8 +2,8 @@ import { IconContext } from 'react-icons';
 import { MdMailOutline } from "react-icons/md";
 import { SiYoutube, SiInstagram } from "react-icons/si";
 
-import Header from './Header/Header'
-import Card from './Card/Card'
+import Header from './Components/Header/Header'
+import Card from './Components/Card/Card'
 import './App.css'
 
 import thumbnails from './assets/thumbnails/thumbnail-images'

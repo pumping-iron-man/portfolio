@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 
-import Header from "../../Header/Header"
+import Header from "../../Components/Header/Header"
 import './Bookingsystem.css'
 
 import imgs from '../../assets/bs/bs-images'
