@@ -1,0 +1,17 @@
+.Card {
+    cursor: pointer;
+}
+
+.CardImg {
+    width: 100%;
+}
+
+.CardTitle {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.PlaceholderCard {
+    width: 100%;
+    background-color: rgb(151, 151, 151);
+}

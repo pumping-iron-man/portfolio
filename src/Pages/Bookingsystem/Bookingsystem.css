@@ -1,0 +1,357 @@
+:root {
+    --blue: #1A74C0;
+    counter-reset: questions;
+}
+
+.BookingContainer {
+    display: grid;
+    grid-template-columns: 1fr 8.5fr 1fr;
+}
+
+.BookingContainer > div, .BookingContainer > hr {
+    grid-column: 2 / 3;
+}
+
+.TitleImg {
+    grid-column: 2 / 3;
+    width: 100%;
+}
+
+.Subheading {
+    text-transform: uppercase;
+    color: rgb(133, 133, 133);
+}
+
+.Divider {
+    margin: 2.5rem 0;
+}
+
+.BottomMargin {
+    margin-bottom: 2.5rem;
+}
+
+.ProjectDetails {
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    padding-bottom: 0;
+    background-color: #efefef;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.Problem {
+    grid-column: 3 / 9;
+}
+
+.Screens {
+    display: flex;
+    flex-direction: column;
+}
+
+.Screens > div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 3rem;
+}
+
+.Screens img {
+    width: 50%;
+    align-self: center;
+}
+
+.Screens p {
+    align-self: center;
+    font-size: 24px;
+}
+
+.Screens span {
+    font-weight: bold;
+}
+
+.SectionTitle {
+    /* font-size: 40px; */
+    font-size: clamp(24px, 3vw, 48px);
+    font-weight: 800;
+    line-height: initial;
+}
+
+.LinkColor {
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.LinkColor:hover {
+    text-decoration: underline var(--blue);
+}
+
+.ProblemPictures {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    margin-top: 3rem;
+}
+
+#long-queue-pic {
+    grid-column: 1 / 2;
+    width: 100%;
+}
+
+#room-pic {
+    grid-column: 2 / 3;
+    width: 100%;
+}
+
+#current-solution-pic {
+    grid-column: 3 / 4;
+    width: 100%;
+}
+
+.Questions {
+    margin: 2.5rem 0;
+}
+
+.Questions ~ p {
+    margin-left: 2rem;
+}
+
+.Questions ~ p::before {
+    counter-increment: questions;
+    content: counter(questions) '. '
+}
+
+.PersonaContainer {
+    display: flex;
+    gap: 1rem;
+}
+
+.PersonaImg, .JourneyImg {
+    width: 100%;
+    border-style: solid;
+    border-width: 1.25px;
+}
+
+.InsightsContainer {
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.InsightsContainer > p {
+    font-size: 1.25rem;
+
+}
+
+.InsightsContainer > div {
+    width: inherit;
+    display: grid;
+    grid-template-columns: repeat(3, calc(100% / 3.125));
+    justify-content: space-between;
+}
+
+.MajorTitle {
+    font-weight: bold;
+}
+
+.FlowDiagram img {
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.Sketches img {
+    width: 98%; /*find better solution*/
+    border-style: solid;
+    border-width: .1rem;
+}
+
+.Sketches div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem; 
+}
+
+.FirstDesign div {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.FirstDesign img {
+    width: 70%;
+}
+
+.Testing > div {
+    margin-top: 3rem;
+}
+
+.Testing > div div {
+    margin-bottom: 3rem;
+}
+
+.ImprovementTitle {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.LearndList {
+    margin-left: 2.5rem;
+}
+
+.LastNotes {
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    line-height: 2.5rem;
+}
+
+.LastNotes button {
+    border-style: none;
+    border-radius: 15px;
+    background-color: #74b7dc;
+    transition: 0.1s background-color linear, 0.1s color linear;
+    /* padding: 1rem 4rem; */
+    padding: 1rem 6rem;
+    margin: 3rem 0;
+    place-self: center;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.LastNotes button:hover {
+    background-color: #3c9ad8;
+}
+
+.Styleguide img {
+    width: 100%;
+}
+
+.FinalScreens div {
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+}
+
+.FinalScreens img {
+    width: 70%;
+}
+
+.Keypoint {
+    display: none;
+}
+
+.CustomUnderline {
+    display: inline;
+    box-shadow: 0px -10px 0px 0px #8ac2e77d inset;
+    width: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .TitleImg {
+        grid-column: 1 / -1;
+    }
+
+    .Screens > div{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .Screens > div:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+
+    .Screens p {
+        font-size: 20px;
+        margin-inline: 10%;
+    }
+
+    .InsightsContainer > div:not(:last-child) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .PersonaContainer img {
+        width: auto;
+    }
+    
+    .Sketches div, .Persona div, .InsightsContainer > .ProblemPictures {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .Sketches div {
+        align-items: center;
+    }
+
+    .Sketches img {
+        width: 80%;
+        border-width: .1rem;
+    }
+
+    .FinalScreens div, .FirstDesign div {
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+    
+    .FinalScreens img, .FirstDesign img {
+        width: 50%;
+    }
+
+    .Questions ~ p, .LearndList {
+        margin-left: 0;
+    }
+
+    .Keypoint {
+        display: initial;
+        box-decoration-break: clone;
+    }
+}
+
+@media only screen and (min-width: 514px) and (max-width: 670px){
+
+    .ProjectDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem
+    }
+
+    .ProjectDetails > div > div {
+        display: flex;
+        gap: 1rem;
+        word-wrap: break-word;
+    }
+}
+
+@media only screen and (max-width: 513px){
+
+    .ProjectDetails > div > div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ProjectDetails {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .ProjectDetails p {
+        margin: 10px 0;
+    }
+
+    .LastNotes button {
+        align-self: stretch;
+        padding: 1rem 4rem;
+    }
+
+}

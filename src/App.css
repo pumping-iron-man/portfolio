@@ -1,38 +1,83 @@
 .App {
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 8.5fr 1fr;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App > * {
+  grid-column: 2 / 3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Introduction {
+  align-self: center;
+  margin: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Introduction > p {
+  grid-column: 1 / 5;
+}
+
+.Introduction p:nth-child(2) {
+  line-height: normal;
+}
+
+.Introduction > p:not(:nth-child(2)) {
+  margin: 0;
+}
+
+.Subtext {
+  font-size: 24px;
+  line-height: 2rem;
+  font-weight: 500;
+}
+
+.Attention {
+  font-size: clamp(24px, 3vw, 48px);
+  font-weight: 700;
+}
+
+.Cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.Icons {
+  margin-bottom: 1.5rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.Icons a {
+  color: rgb(128, 128, 128);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Icons a:hover {
+  color: rgb(37, 37, 37);
+}
+
+.react-icons {
+  font-size: 2rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+  .Introduction {
+    margin: 50px 0;
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+
+  .Cards {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .react-icons {
+    font-size: 1.5rem;
   }
 }
