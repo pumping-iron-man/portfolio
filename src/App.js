@@ -6,7 +6,11 @@ import Header from './Header/Header'
 import Card from './Card/Card'
 import './App.css'
 
+import thumbnails from './assets/thumbnails/thumbnail-images'
+
+
 const App = () => {
+
   return (
     <div className="App">
       <Header />
@@ -19,11 +23,11 @@ const App = () => {
       <div className="Studies">
         <p className="Attention">Studies</p>
         <div className='Cards'>
-          <Card imgPath='assets/thumbnails/bs-thumbnail.png' 
+          <Card imgPath= { thumbnails[0] } 
                 imgAlt='Booking-System' 
                 title='Booking-System' 
                 subtext='Enabling University students to book a library seat under Covid restrictions.' />
-          <Card imgPath='assets/thumbnails/mtc-thumbnail.png'
+          <Card imgPath={ thumbnails[1] }
                 imgAlt='More to come' />
         </div>
       </div>

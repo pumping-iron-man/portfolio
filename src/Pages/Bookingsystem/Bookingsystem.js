@@ -1,14 +1,21 @@
+import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 
 import Header from "../../Header/Header"
 import './Bookingsystem.css'
 
+import imgs from '../../assets/bs/bs-images'
+
 
 const Bookingssystem = () => {
 
+    useEffect(() => {
+        window.scrollTo(0,0)
+    }, [])
+
     const setTitleImg = () => {
         const currentWindowWidth = window.innerWidth
-        const titleImg = currentWindowWidth <= 513 ? 'bs-title-sm' : 'bs-title'
+        const titleImg = currentWindowWidth <= 513 ? imgs[1] : imgs[0]
         
         return titleImg
     }
@@ -21,7 +28,7 @@ const Bookingssystem = () => {
             <div className="TitleImg">
             
             </div>
-            <img src={`assets/bookingsystem/${setTitleImg()}.png`} alt='TitleImg' className='TitleImg' />
+            <img src={setTitleImg()} alt='TitleImg' className='TitleImg' />
             <div className="ProjectDetails">
                 <div className="ProjectContext">
                     <b>Project Context</b>
@@ -52,15 +59,15 @@ const Bookingssystem = () => {
                 <p className='SectionTitle'>Rapid authentification and seat indicator are key</p>
                 <div className="Screens">
                     <div>
-                        <img src='assets/bookingsystem/bs-home-screen.png' alt='Home Screen'/>
+                        <img src={imgs[2]} alt='Home Screen'/>
                         <p><span>1. Reservation Overview: </span>Keep on top of all YOUR seat bookings over the whole week</p>        
                     </div>
                     <div>
                         <p><span>2. Easy booking: </span>Knowing how much booking balance there is, you can easily decide for yourself when and where you want to learn</p>        
-                        <img src='assets/bookingsystem/bs-booking1-screen.png' alt='Booking Step 1 - Screen'/>
+                        <img src={imgs[3]} alt='Booking Step 1 - Screen'/>
                     </div>
                     <div>
-                        <img src='assets/bookingsystem/bs-booking2-screen.png' alt='Booking Step 2 - Screen'/>
+                        <img src={imgs[4]} alt='Booking Step 2 - Screen'/>
                         <p><span>3. Real-Time seat availability and positioning: </span>See all free booking times for a specific seat and know where the seat is located</p>        
                     </div>
                 </div>
@@ -115,9 +122,9 @@ const Bookingssystem = () => {
                         <p><span className='Keypoint'>- </span>Somewhat information overload, since there are many boxes to choose from, but still good to get an overview of free capacity</p>
                     </div>
                     <div className="ProblemPictures">
-                    <img src='assets/bookingsystem/bs-queues.png' alt='Long queues' id='long-queue-pic'/>
-                    <img src='assets/bookingsystem/bs-library.png' alt='Study room' id='room-pic' />
-                    <img src='assets/bookingsystem/bs-current.png' alt='Current solution' id='current-solution-pic' />
+                    <img src={imgs[5]} alt='Long queues' id='long-queue-pic'/>
+                    <img src={imgs[6]} alt='Study room' id='room-pic' />
+                    <img src={imgs[7]} alt='Current solution' id='current-solution-pic' />
                 </div>
                 </div>
             </div>
@@ -125,8 +132,8 @@ const Bookingssystem = () => {
             <div className="Persona">
                 <p className="Subheading BottomMargin">persona + user journey</p>
                 <div className="PersonaContainer">
-                    <img src='assets/bookingsystem/bs-persona.png' alt='Persona' className='PersonaImg'/>
-                    <img src='assets/bookingsystem/bs-user-journey.png' alt='User Journey' className='JourneyImg'/>
+                    <img src={imgs[8]} alt='Persona' className='PersonaImg'/>
+                    <img src={imgs[9]} alt='User Journey' className='JourneyImg'/>
                 </div>
             </div>
             <hr className="Divider"/>
@@ -134,17 +141,17 @@ const Bookingssystem = () => {
                 <p className="Subheading BottomMargin">flow diagram</p>
                 <p>Based on the user journey and the opportunities identified in it, I came up with a flow diagram that solves the user's problems and thus contributes to a better booking UX. If it eventually contributes to a better UX, I would find out through testing.
                 The flow diagram shows all paths the user can acquire and does not visualize any specific scenario.</p>
-                <img src='assets/bookingsystem/bs-flow-diagram.png' alt='Flow Diagram'/>
+                <img src={imgs[10]} alt='Flow Diagram'/>
             </div>
             <hr className="Divider"/>
             <div className="Sketches">
                 <p className="Subheading BottomMargin">sketches</p>
                 <p>Based on the previous steps I started to create first sketches to think through possible UIs. Various flight or seat booking apps at cinemas as well as task management apps were sources of inspiration!</p>
                 <div>
-                    <img src='assets/bookingsystem/bs-sketch-1.png' alt='Sketches'/>
-                    <img src='assets/bookingsystem/bs-sketch-2.png' alt='Sketches'/>
-                    <img src='assets/bookingsystem/bs-sketch-3.png' alt='Sketches'/>
-                    <img src='assets/bookingsystem/bs-sketch-4.png' alt='Sketches'/>
+                    <img src={imgs[11]} alt='Sketches'/>
+                    <img src={imgs[12]} alt='Sketches'/>
+                    <img src={imgs[13]} alt='Sketches'/>
+                    <img src={imgs[14]} alt='Sketches'/>
                 </div>
             </div>
             <hr className="Divider"/>
@@ -155,9 +162,9 @@ const Bookingssystem = () => {
                     since similar solutions existed in the apps, which had served as my inspiration.
                 </p>
                 <div>
-                    <img src='assets/bookingsystem/bs-fr-1.png' alt='Home Screen - Initial Design'/>
-                    <img src='assets/bookingsystem/bs-fr-2.png' alt='Booking1 Screen - Initial Design'/>
-                    <img src='assets/bookingsystem/bs-fr-3.png' alt='Booking2 Screen - Initial Design'/>
+                    <img src={imgs[15]} alt='Home Screen - Initial Design'/>
+                    <img src={imgs[16]} alt='Booking1 Screen - Initial Design'/>
+                    <img src={imgs[17]} alt='Booking2 Screen - Initial Design'/>
                 </div>
             </div>
             <hr className="Divider"/>
@@ -195,15 +202,15 @@ const Bookingssystem = () => {
                 <p className="Subheading">the final screens</p>
                 <p className='SectionTitle'>The final product</p>
                 <div>
-                    <img src='assets/bookingsystem/bs-home-screen.png' alt='Home Screen'/>
-                    <img src='assets/bookingsystem/bs-booking1-screen.png' alt='Booking Step 1 - Screen'/>
-                    <img src='assets/bookingsystem/bs-booking2-screen.png' alt='Booking Step 2 - Screen'/>
+                    <img src={imgs[2]} alt='Home Screen'/>
+                    <img src={imgs[3]} alt='Booking Step 1 - Screen'/>
+                    <img src={imgs[4]} alt='Booking Step 2 - Screen'/>
                 </div>
             </div>
             <hr className="Divider"/>
             <div className="Styleguide">
                 <p className="Subheading BottomMargin">styleguide</p>
-                <img src='assets/bookingsystem/bs-styleguide.png' alt='Styleguide'/>
+                <img src={imgs[18]} alt='Styleguide'/>
             </div>
             <hr className="Divider"/>
             <div className="LessonsLearned">
