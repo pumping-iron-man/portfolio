@@ -1,6 +1,5 @@
 import { IconContext } from 'react-icons';
-import { MdMailOutline } from "react-icons/md";
-import { SiYoutube, SiInstagram } from "react-icons/si";
+import { FiYoutube, FiInstagram, FiMail } from "react-icons/fi";
 
 import Header from './Components/Header/Header'
 import Card from './Components/Card/Card'
@@ -36,13 +35,13 @@ const App = () => {
         <IconContext.Provider value={{ className: 'react-icons'}}>
           <div className='Icons'>
             <a href='mailto:zishon@hotmail.de'>
-              <MdMailOutline />
+              <FiMail />
             </a>
             <a href='https://www.youtube.com/c/ThrilledProductions'>
-              <SiYoutube />
+              <FiYoutube />
             </a>
             <a href='https://www.instagram.com/prototyphius/'>
-              <SiInstagram />
+              <FiInstagram />
             </a>
           </div>
         </IconContext.Provider>

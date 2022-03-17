@@ -9,6 +9,11 @@
 .CardTitle {
     font-size: 24px;
     font-weight: 600;
+    margin: 1rem 0;
+}
+
+.CardTitle ~ p {
+    margin: 0;
 }
 
 .PlaceholderCard {

@@ -3,7 +3,7 @@
     margin: 20px 0;
 }
 
-.Links a {
+.Links > a {
    margin: 0 1rem;
    font-size: 14px;
    text-decoration: none;
@@ -14,8 +14,8 @@
     margin-right: 0;
 }
 
-.Links a:first-child, .Links a:hover {
-    color: rgb(37, 37, 37);
+.FirstLink, .Links a:hover {
+    color: rgb(37, 37, 37) !important;
 }
 
 .Burger {
@@ -27,7 +27,7 @@
 
 .Burger div {
     width: 20px;
-    height: 2px;
+    height: 2.2px;
     border-radius: 25px;
     background-color: rgb(37, 37, 37);
     margin: 2.25px;
