@@ -1,94 +1,38 @@
 .Header {
-    place-self: center end;
-    margin: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 8.5fr 1fr;
+    margin: 1.5rem 0;
+}
+
+.Links {
+    grid-column: 2 / 3;
+    justify-self: end;
 }
 
 .Links > a {
-   margin: 0 1rem;
-   font-size: 14px;
-   text-decoration: none;
-   color: rgb(128, 128, 128);
+    margin: 0 1.5rem;
 }
 
-.Links a:last-child {
+.Links > a:last-child {
     margin-right: 0;
 }
 
-.FirstLink, .Links a:hover {
-    color: rgb(37, 37, 37) !important;
+.HeaderIcons {
+    font-size: 1.35rem;
+    color: rgb(128, 128, 128);
 }
 
-.Burger {
-    display: none;
-    background-color: transparent;
-    text-decoration: none;
-    border: none;
-}
-
-.Burger div {
-    width: 20px;
-    height: 2.2px;
-    border-radius: 25px;
-    background-color: rgb(37, 37, 37);
-    margin: 2.25px;
-}
-
-.Burger div:nth-child(2) {
-    width: 15px;
-}
-
-.CloseIcon {
-    display: none;
-    font-size: 1.75rem;
+.HeaderIcons:hover {
     color: rgb(37, 37, 37);
 }
 
+.FirstLink{
+    color: rgb(37, 37, 37);
+}
 
 @media only screen and (max-width: 768px) {
 
-    .Links {
-        position: fixed;
-        inset: 0 0 0 40%;
-        height: 100vh;
-        background-color: rgb(255, 255, 255);
-        box-shadow: -10px 0 20px -10px #7e7e7e;
-        z-index: 1000;
-        transform: translateX(100%);
-        transition: 850ms;
-
-        display: flex;
-        flex-direction: column;
-        gap: 8rem;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .active {
-        transform: translateX(0%);
-        transition: 350ms;
-    }
-
-    .Links a {
-        font-size: 1.5rem;
-        font-weight: 500;
-        margin-inline: 0;
-    }
-
-    .Links > :nth-child(2) {
-        color: rgb(37, 37, 37);
-    }
-
-    .Burger {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        z-index: 9999;
-    }
-
-    .CloseIcon {
-        display: block;
-        position: absolute;
-        top: 20px;
-        right: 30px;
+    .Header {
+        display: none;
     }
 }

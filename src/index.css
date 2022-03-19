@@ -14,4 +14,5 @@ body, img, div {
   letter-spacing: .02em;
   color: rgb(37, 37, 37);
   overflow-x: hidden;
+  font-weight: 500;
 }

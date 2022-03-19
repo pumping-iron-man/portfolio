@@ -1,9 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from 'react-router-dom'
 
-import Header from "../../Components/Header/Header"
 import './Bookingsystem.css'
-
 import imgs from '../../assets/bs/bs-images'
 
 
@@ -24,7 +22,6 @@ const Bookingssystem = () => {
 
     return (
         <div className="BookingContainer">
-            <Header />
             <div className="TitleImg">
             
             </div>
@@ -236,6 +233,7 @@ const Bookingssystem = () => {
                 <b>Thank you for reading! 🧠</b>
                 <button onClick={() => navigate(-1)}>Back to home</button>
             </div>
+            <hr className="Divider"/>
         </div>
     )
 }

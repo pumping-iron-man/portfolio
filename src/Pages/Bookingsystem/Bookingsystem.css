@@ -214,7 +214,7 @@
     transition: 0.1s background-color linear, 0.1s color linear;
     /* padding: 1rem 4rem; */
     padding: 1rem 6rem;
-    margin: 3rem 0;
+    margin-top: 3rem;
     place-self: center;
     font-size: 24px;
     cursor: pointer;
