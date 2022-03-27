@@ -30,7 +30,7 @@ const Bookingssystem = () => {
                 <div className="ProjectContext">
                     <b>Project Context</b>
                     <div>
-                        <p>Designed in 7 days in Spring 2021</p>
+                        <p>Designed in 7 days in Fall 2020</p>
                         <p>Solo project for the Goethe University, Frankfurt</p>
                     </div>
                 </div>
